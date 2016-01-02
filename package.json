@@ -1,7 +1,7 @@
 {
-  "name": "minimal-jsdoc",
+  "name": "jaguarjs-jsdoc",
   "version": "0.0.1",
-  "description": "Minimal One page template for JSDoc 3",
+  "description": "Jaguar.js template for JSDoc 3",
   "main": "Gruntfile.js",
   "dependencies": {
   },
@@ -21,17 +21,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/chiedo/minimal-jsdoc.git"
+    "url": "git://github.com/davidshimjs/jaguarjs-jsdoc.git"
   },
   "keywords": [
     "jsdoc",
     "jsdoc3",
+    "jaguar.js",
     "template"
   ],
-  "author": "chiedo",
+  "author": "davidshimjs",
   "license": "MIT",
   "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/chiedo/minimal-jsdoc/issues"
+    "url": "https://github.com/davidshimjs/jaguarjs-jsdoc/issues"
   }
 }

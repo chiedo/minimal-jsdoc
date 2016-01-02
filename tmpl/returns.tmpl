@@ -44,15 +44,7 @@ returns.forEach(function (ret, i) {
 ?>
 
 <?js if (hasType) { ?>
-<table class="params">
-    <thead>
-    <tr>
-        <?js if (hasName) { ?><th>Name</th><?js } ?>
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-    <tbody>
+<div class="params">
     <?js
         var self = this;
         returns.forEach(function(ret) {
@@ -61,8 +53,9 @@ returns.forEach(function (ret, i) {
             }
     ?>
         <tr>
-            <?js if (ret.name) { ?><td class="name"><code><?js= ret.name ?></code></td><?js } ?>
+            <?js if (ret.name) { ?><span class="name"><code><?js= ret.name ?></code></span><?js } ?>
             <td class="type">
+            (
             <?js
                 if (ret.type && ret.type.names) {
                     ret.type.names.forEach(function(name, i) { ?>
@@ -72,13 +65,15 @@ returns.forEach(function (ret, i) {
                 }
             ?>
             </td>
-            <td class="description last"><?js= ret.description ?><?js if (ret.subReturns) { ?>
+            )
+            <?js if (ret.description) { ?>
+            <td class="description last">: <?js= ret.description ?><?js if (ret.subReturns) { ?>
                 <?js= self.partial('returns.tmpl', ret.subReturns) ?>
             <?js } ?></td>
+            <?js } ?>
         </tr>
     <?js }); ?>
-    </tbody>
-</table>
+</div>
 <?js } else { ?>
 <?js if (returns[0].description) { ?>
 <?js= returns[0].description ?>
