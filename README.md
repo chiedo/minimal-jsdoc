@@ -43,6 +43,10 @@ You can set options for customizing your documentations.
 }
 ```
 
+Credits
+---
+Many credits go to davidshimjs as this is a fork of [davidshimjs/jaguarjs-jsdoc](https://github.com/davidshimjs/jaguarjs-jsdoc)
+
 License
 ---
 This project under the MIT License. and this project refered by default template for JSDoc 3.
