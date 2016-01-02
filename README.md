@@ -1,26 +1,20 @@
-Jaguar.js template for JSDoc 3
+Minimal template for JSDoc 3
 ---
-- [Jaguar.js](http://davidshimjs.github.io/jaguarjs)
-- [Jaguar.js Documentations](http://davidshimjs.github.io/jaguarjs/doc)
-- [JSDoc3](https://github.com/jsdoc3/jsdoc)
-- [JSDoc3 API Documentations](http://usejsdoc.org)
+A minimal template for creating clean documentation for one-namespace libraries.
+
+See a [demo](https://rawgit.com/chiedolabs/objob/master/docs/ob.html).
+
+Currently, I need to fix a bug where index.html is blank. For now, you will need to visit YOURNAMESPACE.html for your documentation.
 
 Usage
 ---
-1. If you want to create documentations with sample files, you can use commands below.
+
 ```
-$ npm install
-$ grunt demo
+npm install --save-dev minimal-jsdoc
 ```
 
-2. You can see any output related jsdoc process with a `--debug` flag.
 ```
-$ grunt demo --debug
-```
-
-3. If you already have jsdoc system, you can use this project as jsdoc template.
-```
-$ jsdoc -t `project folder` -c `configuration file` `source files` `README.md file`
+$ jsdoc -t .node_modules/minimal-jsdoc -c `configuration file` `source files` `README.md file`
 ```
 
 conf.json
@@ -29,6 +23,7 @@ You can set options for customizing your documentations.
 
 ```
 "templates": {
+	"version": "1.0.0",
     "applicationName": "Demo",
     "disqus": "",
     "googleAnalytics": "",
@@ -51,6 +46,4 @@ You can set options for customizing your documentations.
 License
 ---
 This project under the MIT License. and this project refered by default template for JSDoc 3.
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/davidshimjs/jaguarjs-jsdoc/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
