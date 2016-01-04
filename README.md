@@ -4,7 +4,7 @@ A minimal template for creating clean documentation for one-namespace libraries.
 
 See a [demo](https://rawgit.com/chiedolabs/objob/master/docs/ob.html).
 
-Currently, I need to fix a bug where index.html is blank. For now, you will need to visit YOURNAMESPACE.html for your documentation.
+You will need to link to your namespace file from the index yourself by passing a README to jsdoc.
 
 This is still a beta and hasn't been heavily field tested.
 
