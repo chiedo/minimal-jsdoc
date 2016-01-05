@@ -1,12 +1,10 @@
-Minimal template for JSDoc 3
+Minimal template for JSDoc 3 (Beta)
 ---
 A minimal template for creating clean documentation for one-namespace libraries.
 
 See a [demo](https://rawgit.com/chiedolabs/objob/master/docs/ob.html).
 
-You will need to link to your namespace file from the index yourself by passing a README to jsdoc.
-
-This is still a beta and hasn't been heavily field tested.
+This is still a beta and hasn't been heavily field tested. The code is pretty dirty right now due to pure laziness. This should only be used if your library contains one name-space. Not sure what would happen if you added more that one. Haha.
 
 Usage
 ---
@@ -16,7 +14,7 @@ npm install --save-dev minimal-jsdoc
 ```
 
 ```
-$ jsdoc -t .node_modules/minimal-jsdoc -c `configuration file` `source files` `README.md file`
+$ jsdoc -t .node_modules/minimal-jsdoc -c `configuration file` `source files` --readme `README.md file`
 ```
 
 conf.json

@@ -51,7 +51,7 @@ var self = this;
 
                 item.methods.forEach(function (v) {
             ?>
-                <li data-name="<?js= v.longname ?>"><?js= self.linkto(v.longname, v.name) ?></li>
+            <li data-name="<?js= v.longname ?>"><a href="#.<?js= v.name ?>"><?js=v.name ?></a></li>
             <?js
                 });
             }
@@ -75,3 +75,4 @@ var self = this;
     <?js }); ?>
     </ul>
 </div>
+

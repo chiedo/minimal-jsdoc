@@ -448,12 +448,6 @@ exports.publish = function(taffyData, opts, tutorials) {
     var files = find({kind: 'file'}),
         packages = find({kind: 'package'});
 
-    generate('Index',
-        packages.concat(
-            [{kind: 'mainpage', readme: opts.readme, longname: (opts.mainpagetitle) ? opts.mainpagetitle : 'Main Page'}]
-        ).concat(files),
-    indexUrl);
-
     // set up the lists that we'll use to generate pages
     var classes = taffy(members.classes);
     var modules = taffy(members.modules);
@@ -475,7 +469,8 @@ exports.publish = function(taffyData, opts, tutorials) {
 
             var myNamespaces = helper.find(namespaces, {longname: longname});
             if (myNamespaces.length) {
-                generate('Namespace: ' + myNamespaces[0].name, myNamespaces, helper.longnameToUrl[longname]);
+                myNamespaces = [{readme: opts.readme}].concat(myNamespaces);
+                generate('Namespace: ' + myNamespaces[0].name, myNamespaces, 'index.html');
             }
             
             var myMixins = helper.find(mixins, {longname: longname});
@@ -517,3 +512,4 @@ exports.publish = function(taffyData, opts, tutorials) {
     }
     saveChildren(tutorials);
 };
+
