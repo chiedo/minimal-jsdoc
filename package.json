@@ -1,6 +1,6 @@
 {
   "name": "minimal-jsdoc",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Minimal template for JSDoc 3",
   "main": "Gruntfile.js",
   "dependencies": {},
